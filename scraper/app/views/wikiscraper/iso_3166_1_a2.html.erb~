@@ -1,0 +1,33 @@
+<h1>Wikiscraper#index</h1>
+<p>Find me in app/views/wikiscraper/index.html.erb</p>
+
+<style>
+.html-code pre {
+  background-color: gray;
+  border: 1px solid black;
+}
+</style>
+
+<ul>
+<% @rows.each do |row| %>
+<li><%= cells[1].content %>
+<% cells = row.css('td') %>
+<% if not cells.nil? %>
+<ul>
+<% i = 0 %>
+<% while i < 4 %>
+<li><% if not cells[i].nil? %><%= cells[i].content %><% end %></li>
+<% i = i + 1 %>
+<% end %>
+<li><% if not cells[4].nil? %><%= cells[4].css('a').to_s.html_safe %><% end %></li>
+<% if not cells[5].nil? %><li><%= cells[5].content %></li><% end %>
+</ul>
+<% end %>
+<!--code class="html-code"><pre><%#= row.to_s %></pre></code-->
+</li>
+<% end %>
+</ul>
+
+<!--code class="html-code"><pre><%#= @table.to_s %></pre></code>
+
+<code class="html-code"><pre><%#= @doc.to_s %></pre></code-->

@@ -1,0 +1,9 @@
+<h1>Wikiscraper#index</h1>
+<p>Find me in app/views/wikiscraper/index.html.erb</p>
+
+<style>
+.html-code {
+  background-color: gray;
+  border: 1px solid black;
+}
+</style>
