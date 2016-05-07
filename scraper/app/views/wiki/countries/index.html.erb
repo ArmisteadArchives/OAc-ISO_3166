@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wiki Countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alpha 2</th>
+      <th>Alpha 3</th>
+      <th>Numeric</th>
+      <th>Iso name</th>
+      <th>Year added</th>
+      <th>Domain</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wiki_countries.each do |wiki_country| %>
+      <tr>
+        <td><%= wiki_country.alpha_2 %></td>
+        <td><%= wiki_country.alpha_3 %></td>
+        <td><%= wiki_country.numeric %></td>
+        <td><%= wiki_country.iso_name %></td>
+        <td><%= wiki_country.year_added %></td>
+        <td><%= wiki_country.domain %></td>
+        <td><%= link_to 'Show', wiki_country %></td>
+        <td><%= link_to 'Edit', edit_wiki_country_path(wiki_country) %></td>
+        <td><%= link_to 'Destroy', wiki_country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Country', new_wiki_country_path %>

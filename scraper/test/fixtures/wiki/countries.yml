@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alpha_2: MyString
+  alpha_3: MyString
+  numeric: 1
+  iso_name: MyString
+  year_added: 1
+  domain: MyString
+
+two:
+  alpha_2: MyString
+  alpha_3: MyString
+  numeric: 1
+  iso_name: MyString
+  year_added: 1
+  domain: MyString

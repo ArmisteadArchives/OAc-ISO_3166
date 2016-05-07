@@ -1,0 +1,33 @@
+<%= form_for(@wiki_country_subdivision) do |f| %>
+  <% if @wiki_country_subdivision.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wiki_country_subdivision.errors.count, "error") %> prohibited this wiki_country_subdivision from being saved:</h2>
+
+      <ul>
+      <% @wiki_country_subdivision.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :country_id %><br>
+    <%= f.text_field :country_id %>
+  </div>
+  <div class="field">
+    <%= f.label :alpha %><br>
+    <%= f.text_field :alpha %>
+  </div>
+  <div class="field">
+    <%= f.label :native_name %><br>
+    <%= f.text_field :native_name %>
+  </div>
+  <div class="field">
+    <%= f.label :iso_name %><br>
+    <%= f.text_field :iso_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,13 +11,13 @@
 <ul>
   <% @subds.each do |subd| %>
     <li><%= subd[1] %>
-        <ul>
+        <ol>
           <% i = 0 %>
           <% while i < 5 %>
             <li><%# if not cells[i].nil? %><%= subd[i] %><%# end %></li>
             <% i = i + 1 %>
           <% end %>
-        </ul>
+        </ol>
     </li>
   <% end %>
 </ul>

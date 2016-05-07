@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country_id: 
+  alpha: MyString
+  native_name: MyString
+  iso_name: MyString
+
+two:
+  country_id: 
+  alpha: MyString
+  native_name: MyString
+  iso_name: MyString
